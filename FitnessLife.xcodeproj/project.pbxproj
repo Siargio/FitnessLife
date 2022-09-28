@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		EC84E8A028E488E3006ACD4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84E89F28E488E3006ACD4A /* AppDelegate.swift */; };
 		EC84E8A228E488E3006ACD4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84E8A128E488E3006ACD4A /* SceneDelegate.swift */; };
-		EC84E8A428E488E3006ACD4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84E8A328E488E3006ACD4A /* ViewController.swift */; };
-		EC84E8A728E488E3006ACD4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC84E8A528E488E3006ACD4A /* Main.storyboard */; };
+		EC84E8A428E488E3006ACD4A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84E8A328E488E3006ACD4A /* MainViewController.swift */; };
 		EC84E8A928E488E4006ACD4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC84E8A828E488E4006ACD4A /* Assets.xcassets */; };
 		EC84E8AC28E488E4006ACD4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC84E8AA28E488E4006ACD4A /* LaunchScreen.storyboard */; };
+		EC84E8BB28E4906F006ACD4A /* UIFont + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84E8BA28E4906F006ACD4A /* UIFont + Extensions.swift */; };
+		EC84E8BD28E49078006ACD4A /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84E8BC28E49078006ACD4A /* UIColor + Extensions.swift */; };
+		EC84E8BF28E4907E006ACD4A /* UIView + Extensoins.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84E8BE28E4907E006ACD4A /* UIView + Extensoins.swift */; };
+		EC84E8C128E49213006ACD4A /* UIStackView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84E8C028E49213006ACD4A /* UIStackView + Extensions.swift */; };
+		EC84E8C428E4996C006ACD4A /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC84E8C328E4996C006ACD4A /* Roboto-Medium.ttf */; };
+		EC84E8C628E499A1006ACD4A /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC84E8C528E499A1006ACD4A /* Roboto-Bold.ttf */; };
+		EC84E8C928E4BA21006ACD4A /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84E8C828E4BA21006ACD4A /* CalendarView.swift */; };
+		EC84E8CC28E4E8A3006ACD4A /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84E8CB28E4E8A3006ACD4A /* CalendarCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EC84E89C28E488E3006ACD4A /* FitnessLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC84E89F28E488E3006ACD4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC84E8A128E488E3006ACD4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EC84E8A328E488E3006ACD4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EC84E8A628E488E3006ACD4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC84E8A328E488E3006ACD4A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EC84E8A828E488E4006ACD4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC84E8AB28E488E4006ACD4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC84E8AD28E488E4006ACD4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC84E8BA28E4906F006ACD4A /* UIFont + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extensions.swift"; sourceTree = "<group>"; };
+		EC84E8BC28E49078006ACD4A /* UIColor + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extensions.swift"; sourceTree = "<group>"; };
+		EC84E8BE28E4907E006ACD4A /* UIView + Extensoins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensoins.swift"; sourceTree = "<group>"; };
+		EC84E8C028E49213006ACD4A /* UIStackView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extensions.swift"; sourceTree = "<group>"; };
+		EC84E8C328E4996C006ACD4A /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		EC84E8C528E499A1006ACD4A /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		EC84E8C828E4BA21006ACD4A /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		EC84E8CB28E4E8A3006ACD4A /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,102 @@
 		EC84E89E28E488E3006ACD4A /* FitnessLife */ = {
 			isa = PBXGroup;
 			children = (
+				EC84E8B728E48CF8006ACD4A /* Application */,
+				EC84E8B628E48CF4006ACD4A /* Models */,
+				EC84E8B428E48CEF006ACD4A /* Views */,
+				EC84E8B528E48CF2006ACD4A /* Controllers */,
+				EC84E8B328E48CE8006ACD4A /* Extensions */,
+				EC84E8B928E48E8A006ACD4A /* Resources */,
+			);
+			path = FitnessLife;
+			sourceTree = "<group>";
+		};
+		EC84E8B328E48CE8006ACD4A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EC84E8B828E48E7B006ACD4A /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EC84E8B428E48CEF006ACD4A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC84E8C728E4BA0B006ACD4A /* MainVC */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EC84E8B528E48CF2006ACD4A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC84E8A328E488E3006ACD4A /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EC84E8B628E48CF4006ACD4A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EC84E8B728E48CF8006ACD4A /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				EC84E89F28E488E3006ACD4A /* AppDelegate.swift */,
 				EC84E8A128E488E3006ACD4A /* SceneDelegate.swift */,
-				EC84E8A328E488E3006ACD4A /* ViewController.swift */,
-				EC84E8A528E488E3006ACD4A /* Main.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		EC84E8B828E48E7B006ACD4A /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				EC84E8BA28E4906F006ACD4A /* UIFont + Extensions.swift */,
+				EC84E8BC28E49078006ACD4A /* UIColor + Extensions.swift */,
+				EC84E8BE28E4907E006ACD4A /* UIView + Extensoins.swift */,
+				EC84E8C028E49213006ACD4A /* UIStackView + Extensions.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		EC84E8B928E48E8A006ACD4A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC84E8C228E4991B006ACD4A /* Fonts */,
 				EC84E8A828E488E4006ACD4A /* Assets.xcassets */,
 				EC84E8AA28E488E4006ACD4A /* LaunchScreen.storyboard */,
 				EC84E8AD28E488E4006ACD4A /* Info.plist */,
 			);
-			path = FitnessLife;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EC84E8C228E4991B006ACD4A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EC84E8C528E499A1006ACD4A /* Roboto-Bold.ttf */,
+				EC84E8C328E4996C006ACD4A /* Roboto-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EC84E8C728E4BA0B006ACD4A /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				EC84E8CD28E4E8AE006ACD4A /* Cells */,
+				EC84E8C828E4BA21006ACD4A /* CalendarView.swift */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		EC84E8CD28E4E8AE006ACD4A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EC84E8CB28E4E8A3006ACD4A /* CalendarCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +228,8 @@
 			files = (
 				EC84E8AC28E488E4006ACD4A /* LaunchScreen.storyboard in Resources */,
 				EC84E8A928E488E4006ACD4A /* Assets.xcassets in Resources */,
-				EC84E8A728E488E3006ACD4A /* Main.storyboard in Resources */,
+				EC84E8C628E499A1006ACD4A /* Roboto-Bold.ttf in Resources */,
+				EC84E8C428E4996C006ACD4A /* Roboto-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +240,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC84E8A428E488E3006ACD4A /* ViewController.swift in Sources */,
+				EC84E8BF28E4907E006ACD4A /* UIView + Extensoins.swift in Sources */,
+				EC84E8BD28E49078006ACD4A /* UIColor + Extensions.swift in Sources */,
+				EC84E8C928E4BA21006ACD4A /* CalendarView.swift in Sources */,
+				EC84E8C128E49213006ACD4A /* UIStackView + Extensions.swift in Sources */,
+				EC84E8A428E488E3006ACD4A /* MainViewController.swift in Sources */,
+				EC84E8BB28E4906F006ACD4A /* UIFont + Extensions.swift in Sources */,
+				EC84E8CC28E4E8A3006ACD4A /* CalendarCollectionViewCell.swift in Sources */,
 				EC84E8A028E488E3006ACD4A /* AppDelegate.swift in Sources */,
 				EC84E8A228E488E3006ACD4A /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +255,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EC84E8A528E488E3006ACD4A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EC84E8A628E488E3006ACD4A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EC84E8AA28E488E4006ACD4A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -216,6 +316,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -270,6 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -289,12 +391,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3496F3A4HL;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FitnessLife/Info.plist;
+				INFOPLIST_FILE = FitnessLife/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +404,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.my.FitnessLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +422,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3496F3A4HL;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FitnessLife/Info.plist;
+				INFOPLIST_FILE = FitnessLife/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +435,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.my.FitnessLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
