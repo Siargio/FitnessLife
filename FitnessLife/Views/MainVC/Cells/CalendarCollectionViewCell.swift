@@ -63,10 +63,8 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     private func setConstraints() {
         NSLayoutConstraint.activate([
             dayOfWeekLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            dayOfWeekLabel.topAnchor.constraint(equalTo: topAnchor, constant: 7)
-        ])
+            dayOfWeekLabel.topAnchor.constraint(equalTo: topAnchor, constant: 7),
 
-        NSLayoutConstraint.activate([
             numberOfDayLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             numberOfDayLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5)
         ])
