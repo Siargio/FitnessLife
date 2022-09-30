@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC8360D028E78FD40037F29C /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8360CF28E78FD40037F29C /* WorkoutTableViewCell.swift */; };
 		EC84E8A028E488E3006ACD4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84E89F28E488E3006ACD4A /* AppDelegate.swift */; };
 		EC84E8A228E488E3006ACD4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84E8A128E488E3006ACD4A /* SceneDelegate.swift */; };
 		EC84E8A428E488E3006ACD4A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84E8A328E488E3006ACD4A /* MainViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC8360CF28E78FD40037F29C /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		EC84E89C28E488E3006ACD4A /* FitnessLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC84E89F28E488E3006ACD4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC84E8A128E488E3006ACD4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				EC84E8CB28E4E8A3006ACD4A /* CalendarCollectionViewCell.swift */,
+				EC8360CF28E78FD40037F29C /* WorkoutTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				EC84E8BF28E4907E006ACD4A /* UIView + Extensoins.swift in Sources */,
 				EC84E8BD28E49078006ACD4A /* UIColor + Extensions.swift in Sources */,
 				EC84E8C928E4BA21006ACD4A /* CalendarView.swift in Sources */,
+				EC8360D028E78FD40037F29C /* WorkoutTableViewCell.swift in Sources */,
 				EC84E8C128E49213006ACD4A /* UIStackView + Extensions.swift in Sources */,
 				EC84E8A428E488E3006ACD4A /* MainViewController.swift in Sources */,
 				EC84E8BB28E4906F006ACD4A /* UIFont + Extensions.swift in Sources */,
