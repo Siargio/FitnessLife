@@ -75,7 +75,7 @@ class MainViewController: UIViewController {
         tableView.showsVerticalScrollIndicator = false // скрол
         tableView.delaysContentTouches = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        //tableView.isHidden = true
+        tableView.isHidden = true
         return tableView
     }()
 
@@ -83,7 +83,7 @@ class MainViewController: UIViewController {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "noWorkout")
         imageView.contentMode = .scaleToFill
-        imageView.isHidden = true
+        //imageView.isHidden = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -123,7 +123,9 @@ class MainViewController: UIViewController {
     // MARK: - Action
 
     @objc private func addWorkoutButtonTapped() {
-        print("addWorkoutButtonTapped")
+        let newWorkoutViewController = NewWorkoutViewController()
+        //newWorkoutViewController.modalPresentationStyle = .fullScreen
+        present(newWorkoutViewController, animated: true)
     }
 }
 
