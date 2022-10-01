@@ -8,10 +8,6 @@
 import UIKit
 
 extension UIFont {
-   
-    static func robotoMedium24() -> UIFont? {
-        return UIFont.init(name: "Roboto-Medium", size: 24)
-    }
 
     static func robotoMedium12() -> UIFont? {
         return UIFont.init(name: "Roboto-Medium", size: 12)
@@ -31,5 +27,22 @@ extension UIFont {
 
     static func robotoMedium20() -> UIFont? {
         return UIFont.init(name: "Roboto-Medium", size: 20)
+    }
+
+    static func robotoMedium22() -> UIFont? {
+        return UIFont.init(name: "Roboto-Medium", size: 22)
+    }
+
+    static func robotoMedium24() -> UIFont? {
+        return UIFont.init(name: "Roboto-Medium", size: 24)
+    }
+
+    //Bold
+    static func robotoBold16() -> UIFont? {
+        return UIFont.init(name: "Roboto-Bold", size: 16)
+    }
+
+    static func robotoBold20() -> UIFont? {
+        return UIFont.init(name: "Roboto-Bold", size: 20)
     }
 }

@@ -10,11 +10,12 @@ import UIKit
 class MainViewController: UIViewController {
 
     private let calendarView = CalendarView()
+    private let weatherView = WeatherView()
     private let idWorkoutTableViewCell = "idWorkoutTableViewCell"
 
     // MARK: - UIElements
 
-    private lazy var userPhotoImage: UIImageView = {
+    private lazy var userPhotoImageView: UIImageView = {
         let userPhotoImage = UIImageView()
         userPhotoImage.backgroundColor = .systemGray3
         userPhotoImage.layer.borderWidth = 5
@@ -72,13 +73,21 @@ class MainViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.bounces = false
         tableView.showsVerticalScrollIndicator = false // скрол
+        tableView.delaysContentTouches = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        //tableView.isHidden = true
         return tableView
     }()
 
-    override func viewDidLayoutSubviews() {
-        userPhotoImage.layer.cornerRadius = userPhotoImage.frame.width / 2
-    }
+    private lazy var noWorkoutImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "noWorkout")
+        imageView.contentMode = .scaleToFill
+        imageView.isHidden = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+
 
     // MARK: - Setting
 
@@ -90,6 +99,10 @@ class MainViewController: UIViewController {
         tableView.register(WorkoutTableViewCell.self, forCellReuseIdentifier: idWorkoutTableViewCell)
     }
 
+    override func viewDidLayoutSubviews() {
+        userPhotoImageView.layer.cornerRadius = userPhotoImageView.frame.width / 2
+    }
+
     private func setDelegate() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -98,11 +111,13 @@ class MainViewController: UIViewController {
     private func setupHierarchy() {
         view.backgroundColor = .specialBackground
         view.addSubview(calendarView)
-        view.addSubview(userPhotoImage)
+        view.addSubview(userPhotoImageView)
         view.addSubview(userNameLabel)
         view.addSubview(addWorkoutButton)
+        view.addSubview(weatherView)
         view.addSubview(workoutTodayLabel)
         view.addSubview(tableView)
+        view.addSubview(noWorkoutImageView)
     }
 
     // MARK: - Action
@@ -141,17 +156,17 @@ extension MainViewController {
 
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            userPhotoImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
-            userPhotoImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            userPhotoImage.heightAnchor.constraint(equalToConstant: 100),
-            userPhotoImage.widthAnchor.constraint(equalToConstant: 100),
+            userPhotoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
+            userPhotoImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            userPhotoImageView.heightAnchor.constraint(equalToConstant: 100),
+            userPhotoImageView.widthAnchor.constraint(equalToConstant: 100),
 
             calendarView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
             calendarView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             calendarView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             calendarView.heightAnchor.constraint(equalToConstant: 70),
 
-            userNameLabel.leadingAnchor.constraint(equalTo: userPhotoImage.trailingAnchor, constant: 5),
+            userNameLabel.leadingAnchor.constraint(equalTo: userPhotoImageView.trailingAnchor, constant: 5),
             userNameLabel.bottomAnchor.constraint(equalTo: calendarView.topAnchor, constant: -10),
             userNameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
 
@@ -160,13 +175,23 @@ extension MainViewController {
             addWorkoutButton.heightAnchor.constraint(equalToConstant: 80),
             addWorkoutButton.widthAnchor.constraint(equalToConstant: 80),
 
+            weatherView.leadingAnchor.constraint(equalTo: addWorkoutButton.trailingAnchor, constant: 10),
+            weatherView.topAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: 5),
+            weatherView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            weatherView.heightAnchor.constraint(equalToConstant: 80),
+
             workoutTodayLabel.topAnchor.constraint(equalTo: addWorkoutButton.bottomAnchor, constant: 10),
             workoutTodayLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
 
             tableView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor, constant: 0),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+
+            noWorkoutImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            noWorkoutImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            noWorkoutImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1),
+            noWorkoutImageView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor)
         ])
     }
 }
