@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		EC0C418228E8C58000FD9503 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C418128E8C58000FD9503 /* WeatherView.swift */; };
-		EC0C418428E8C60400FD9503 /* NewWorkutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C418328E8C60400FD9503 /* NewWorkutViewController.swift */; };
+		EC0C418428E8C60400FD9503 /* NewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C418328E8C60400FD9503 /* NewWorkoutViewController.swift */; };
 		EC0C418628E8C61B00FD9503 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C418528E8C61B00FD9503 /* StatisticViewController.swift */; };
 		EC0C418828E8C62D00FD9503 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C418728E8C62D00FD9503 /* ProfileViewController.swift */; };
 		EC0C418A28E8D8DF00FD9503 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C418928E8D8DF00FD9503 /* MainTabBarController.swift */; };
+		EC0C418D28E8DE3C00FD9503 /* DateAndRepeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C418C28E8DE3C00FD9503 /* DateAndRepeatView.swift */; };
+		EC0C418F28E8DE4D00FD9503 /* RepsOrTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C418E28E8DE4D00FD9503 /* RepsOrTimerView.swift */; };
 		EC8360D028E78FD40037F29C /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8360CF28E78FD40037F29C /* WorkoutTableViewCell.swift */; };
 		EC84E8A028E488E3006ACD4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84E89F28E488E3006ACD4A /* AppDelegate.swift */; };
 		EC84E8A228E488E3006ACD4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84E8A128E488E3006ACD4A /* SceneDelegate.swift */; };
@@ -30,10 +32,12 @@
 
 /* Begin PBXFileReference section */
 		EC0C418128E8C58000FD9503 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
-		EC0C418328E8C60400FD9503 /* NewWorkutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkutViewController.swift; sourceTree = "<group>"; };
+		EC0C418328E8C60400FD9503 /* NewWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutViewController.swift; sourceTree = "<group>"; };
 		EC0C418528E8C61B00FD9503 /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
 		EC0C418728E8C62D00FD9503 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EC0C418928E8D8DF00FD9503 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		EC0C418C28E8DE3C00FD9503 /* DateAndRepeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndRepeatView.swift; sourceTree = "<group>"; };
+		EC0C418E28E8DE4D00FD9503 /* RepsOrTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsOrTimerView.swift; sourceTree = "<group>"; };
 		EC8360CF28E78FD40037F29C /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		EC84E89C28E488E3006ACD4A /* FitnessLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC84E89F28E488E3006ACD4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC0C418B28E8DE1D00FD9503 /* NewWorkoutVC */ = {
+			isa = PBXGroup;
+			children = (
+				EC0C418C28E8DE3C00FD9503 /* DateAndRepeatView.swift */,
+				EC0C418E28E8DE4D00FD9503 /* RepsOrTimerView.swift */,
+			);
+			path = NewWorkoutVC;
+			sourceTree = "<group>";
+		};
 		EC84E89328E488E3006ACD4A = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				EC84E8C728E4BA0B006ACD4A /* MainVC */,
+				EC0C418B28E8DE1D00FD9503 /* NewWorkoutVC */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -113,7 +127,7 @@
 			children = (
 				EC0C418928E8D8DF00FD9503 /* MainTabBarController.swift */,
 				EC84E8A328E488E3006ACD4A /* MainViewController.swift */,
-				EC0C418328E8C60400FD9503 /* NewWorkutViewController.swift */,
+				EC0C418328E8C60400FD9503 /* NewWorkoutViewController.swift */,
 				EC0C418528E8C61B00FD9503 /* StatisticViewController.swift */,
 				EC0C418728E8C62D00FD9503 /* ProfileViewController.swift */,
 			);
@@ -263,14 +277,16 @@
 				EC0C418A28E8D8DF00FD9503 /* MainTabBarController.swift in Sources */,
 				EC84E8C928E4BA21006ACD4A /* CalendarView.swift in Sources */,
 				EC8360D028E78FD40037F29C /* WorkoutTableViewCell.swift in Sources */,
+				EC0C418D28E8DE3C00FD9503 /* DateAndRepeatView.swift in Sources */,
 				EC0C418828E8C62D00FD9503 /* ProfileViewController.swift in Sources */,
 				EC84E8C128E49213006ACD4A /* UIStackView + Extensions.swift in Sources */,
 				EC84E8A428E488E3006ACD4A /* MainViewController.swift in Sources */,
 				EC0C418228E8C58000FD9503 /* WeatherView.swift in Sources */,
 				EC84E8BB28E4906F006ACD4A /* UIFont + Extensions.swift in Sources */,
+				EC0C418F28E8DE4D00FD9503 /* RepsOrTimerView.swift in Sources */,
 				EC0C418628E8C61B00FD9503 /* StatisticViewController.swift in Sources */,
 				EC84E8CC28E4E8A3006ACD4A /* CalendarCollectionViewCell.swift in Sources */,
-				EC0C418428E8C60400FD9503 /* NewWorkutViewController.swift in Sources */,
+				EC0C418428E8C60400FD9503 /* NewWorkoutViewController.swift in Sources */,
 				EC84E8A028E488E3006ACD4A /* AppDelegate.swift in Sources */,
 				EC84E8A228E488E3006ACD4A /* SceneDelegate.swift in Sources */,
 			);
