@@ -34,16 +34,16 @@ class NewWorkoutViewController: UIViewController {
         return button
     }()
 
-    private let nameLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Name"
-        label.font = .robotoMedium14()
-        label.textColor = .specialLightBrown
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+//    private let nameLabel: UILabel = {
+//        let label = UILabel()
+//        label.text = "Name"
+//        label.font = .robotoMedium14()
+//        label.textColor = .specialLightBrown
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        return label
+//    }()
 
-    //private let nameLabel = UILabel(text: "Name")
+    private lazy var nameLabel = UILabel(text: "NameText")
 
     private lazy var nameTextField: UITextField = {
         let textField = UITextField()
@@ -143,7 +143,7 @@ class NewWorkoutViewController: UIViewController {
     private func addTaps() {
         let tapScreen = UITapGestureRecognizer(target: self, action: #selector(hideKeyboeard))
         tapScreen.cancelsTouchesInView = false
-        view.addGestureRecognizer(tapScreen)
+        view.addGestureRecognizer(tapScreen) // скрывает клаву если калацть в любом месте
     }
 
     @objc private func hideKeyboeard() {
@@ -156,7 +156,7 @@ class NewWorkoutViewController: UIViewController {
 extension NewWorkoutViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        nameTextField.resignFirstResponder()
+        nameTextField.resignFirstResponder()// скрываем клавиатуру
     }
 }
 

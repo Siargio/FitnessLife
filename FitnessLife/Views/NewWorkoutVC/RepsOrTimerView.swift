@@ -107,6 +107,8 @@ class RepsOrTimerView: UIView {
         slider.addTarget(self, action: #selector(timerSliderChanged), for: .valueChanged)
         return slider
     }()
+    
+    // MARK: - Setup
 
     var setsStackView = UIStackView()
     var repsStackView = UIStackView()
@@ -128,22 +130,16 @@ class RepsOrTimerView: UIView {
         layer.cornerRadius = 10
         translatesAutoresizingMaskIntoConstraints = false
 
-        setsStackView = UIStackView(arrangedSubviews: [setsLabel,numberOfSetLabel],
-                                    axis: .horizontal,
-                                    spacing: 10)
+        setsStackView = UIStackView(arrangedSubviews: [setsLabel,numberOfSetLabel], axis: .horizontal, spacing: 10)
         addSubview(setsStackView)
         addSubview(setsSlider)
         addSubview(repeatOrTimerLabel)
 
-        repsStackView = UIStackView(arrangedSubviews: [repsLabel, numberOfRepsLabel],
-                                      axis: .horizontal,
-                                      spacing: 10)
+        repsStackView = UIStackView(arrangedSubviews: [repsLabel, numberOfRepsLabel], axis: .horizontal, spacing: 10)
         addSubview(repsStackView)
         addSubview(repsSlider)
 
-        timerStackView = UIStackView(arrangedSubviews: [timerLabel, numberOfTimerLabel],
-                                      axis: .horizontal,
-                                      spacing: 10)
+        timerStackView = UIStackView(arrangedSubviews: [timerLabel, numberOfTimerLabel], axis: .horizontal, spacing: 10)
         addSubview(timerStackView)
         addSubview(timerSlider)
     }
