@@ -17,4 +17,5 @@ extension UIColor {
     static let specialLightBrown = UIColor(named:"specialLightBrown")
     static let specialBrown = UIColor(named:"specialBrown")
     static let specialBlack = UIColor(named:"specialBlack")
+    static let specialTabBar = UIColor(named: "specialTabBar")
 }

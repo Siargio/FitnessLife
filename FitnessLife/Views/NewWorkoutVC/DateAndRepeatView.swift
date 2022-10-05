@@ -45,6 +45,8 @@ class DateAndRepeatView: UIView {
        return repeatSwitch
     }()
 
+// MARK: - Setup
+
     var dateStackView = UIStackView()
     var repeatStackView = UIStackView()
 

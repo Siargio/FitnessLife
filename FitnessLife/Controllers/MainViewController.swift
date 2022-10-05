@@ -82,7 +82,7 @@ class MainViewController: UIViewController {
     private lazy var noWorkoutImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "noWorkout")
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFit
         //imageView.isHidden = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -158,7 +158,7 @@ extension MainViewController {
 
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            userPhotoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
+            userPhotoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             userPhotoImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             userPhotoImageView.heightAnchor.constraint(equalToConstant: 100),
             userPhotoImageView.widthAnchor.constraint(equalToConstant: 100),
@@ -185,14 +185,14 @@ extension MainViewController {
             workoutTodayLabel.topAnchor.constraint(equalTo: addWorkoutButton.bottomAnchor, constant: 10),
             workoutTodayLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
 
-            tableView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor, constant: 0),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            tableView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
 
-            noWorkoutImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            noWorkoutImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             noWorkoutImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            noWorkoutImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1),
+            noWorkoutImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5),
             noWorkoutImageView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor)
         ])
     }
