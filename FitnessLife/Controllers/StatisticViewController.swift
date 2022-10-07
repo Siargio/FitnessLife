@@ -13,5 +13,4 @@ class StatisticViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .red
     }
-    
 }
