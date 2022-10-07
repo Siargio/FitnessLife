@@ -6,13 +6,17 @@
 //
 
 import UIKit
+import RealmSwift
 
 class NewWorkoutViewController: UIViewController {
 
     private let dateAndRepeatView = DateAndRepeatView()
     private let repsOrTimerView = RepsOrTimerView()
-
     let test = 0.05
+    private let localRealm = try! Realm()
+    private var workoutModel = WorkoutModel()
+
+    private let testImage = UIImage(named: "workoutTestImage")
 
     // MARK: - UIElements
 

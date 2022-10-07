@@ -25,9 +25,9 @@ class WorkoutTableViewCell: UITableViewCell {
         return view
     }()
 
-    private lazy var workoutImageView: UIImageView = {
+    var workoutImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "workoutTestImage")
+        //imageView.image = UIImage(named: "workoutTestImage")
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -93,10 +93,10 @@ class WorkoutTableViewCell: UITableViewCell {
         addSubview(workoutBackgroundView)
         addSubview(workoutImageView)
         addSubview(workoutNameLabel)
-
-        labelsStackView = UIStackView(arrangedSubviews: [workoutRepsLabel, workoutSetsLabel],
-                                      axis: .horizontal,
-                                      spacing: 10)
+        labelsStackView = UIStackView(arrangedSubviews:
+                                        [workoutRepsLabel, workoutSetsLabel],
+                                        axis: .horizontal,
+                                        spacing: 10)
         addSubview(labelsStackView)
         contentView.addSubview(startButton)
     }
@@ -104,6 +104,21 @@ class WorkoutTableViewCell: UITableViewCell {
     @objc private func startButtonTapped() {
         print("startButtonTapped")
     }
+
+    func cellConfigure(model: WorkoutModel) {
+        workoutNameLabel.text = model.workoutName
+
+        let (min, sec) = { (secs: Int) -> (Int, Int) in
+            return (secs / 60, secs % 60)}(model.workoutTimer)
+
+        workoutRepsLabel.text = (model.workoutTimer == 0 ? "Reps: \(model.workoutReps)" : "Timer: \(min) min \(sec) sec")
+        workoutSetsLabel.text = "Sets: \(model.workoutSets)"
+
+        guard let imageData = model.workoutImage else { return }
+        guard let image = UIImage(data: imageData) else { return }
+        workoutImageView.image = image
+    }
+
 
     private func setupConstraints() {
         NSLayoutConstraint.activate([
