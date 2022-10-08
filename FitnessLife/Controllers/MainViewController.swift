@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
     private let weatherView = WeatherView()
     private let idWorkoutTableViewCell = "idWorkoutTableViewCell"
     private let localRealm = try!Realm()
-    private var workoutArray: Results<WorkoutModel>! = nil
+    private var workoutArray: Results<WorkoutModel>!
 
     // MARK: - UIElements
 
@@ -114,6 +114,7 @@ class MainViewController: UIViewController {
     private func setDelegate() {
         tableView.delegate = self
         tableView.dataSource = self
+        calendarView.cellCollectionViewDelegate = self
     }
 
     private func setupHierarchy() {
@@ -139,10 +140,16 @@ class MainViewController: UIViewController {
     private func getWorkouts(date: Date) {
 
         let calendar = Calendar.current
-        let components = calendar.dateComponents([.weekday], from: date)
+        let formatter = DateFormatter()
+        let components = calendar.dateComponents([.weekday, .day, .month, .year], from: date)
         guard let weekday = components.weekday else { return }
+        guard let day = components.day else { return }
+        guard let month = components.month else { return }
+        guard let year = components.year else { return }
+        formatter.timeZone = TimeZone(abbreviation: "UTC")
+        formatter.dateFormat = "yyyy/MM/dd HH:mm"
 
-        let dateStart = date
+        guard let dateStart = formatter.date(from: "\(year)/\(month)/\(day) 00:00") else { return }
         let dateEnd: Date = {
             let components = DateComponents(day: 1, second: -1)
             return Calendar.current.date(byAdding: components, to: dateStart) ?? Date()
@@ -154,6 +161,32 @@ class MainViewController: UIViewController {
 
         workoutArray = localRealm.objects(WorkoutModel.self).filter(compound).sorted(byKeyPath: "workoutName")
         tableView.reloadData()
+    }
+
+}
+
+// MARK: - StartWorkoutProtocol
+
+extension MainViewController: StartWorkoutProtocol {
+
+    func startButtonTapped(model: WorkoutModel) {
+
+        if model.workoutTimer == 0 {
+            let startWorkoutViewController = StartWorkoutViewController()
+            startWorkoutViewController.modalPresentationStyle = .fullScreen
+            startWorkoutViewController.workoutModel = model
+            present(startWorkoutViewController, animated: true)
+        } else {
+            print("timer")
+        }
+    }
+}
+//MARK: - SelectCollectionViewItemProtocol
+
+extension MainViewController: SelectCollectionViewItemProtocol {
+
+    func selectItem(date: Date) {
+        getWorkouts(date: date)
     }
 }
 
@@ -169,6 +202,7 @@ extension MainViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: idWorkoutTableViewCell, for: indexPath) as! WorkoutTableViewCell
         let model = workoutArray[indexPath.row]
         cell.cellConfigure(model: model)
+        cell.cellStartWorkoutDelegate = self
         return cell
     }
 }
@@ -180,9 +214,23 @@ extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
     }
+
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+
+        let action = UIContextualAction(style: .destructive, title: "") { _, _, _ in
+            let deleteModel = self.workoutArray[indexPath.row]
+            RealmManager.shared.deleteWorkoutModel(model: deleteModel)
+            tableView.reloadData()
+        }
+
+        action.backgroundColor = .specialBackground
+        action.image = UIImage(named: "delete")
+
+        return UISwipeActionsConfiguration(actions: [action])
+    }
 }
 
-// MARK: - Set constraints
+// MARK: - SetConstraints
 
 extension MainViewController {
 

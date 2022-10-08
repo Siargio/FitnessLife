@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol StartWorkoutProtocol: AnyObject {
+    func startButtonTapped(model: WorkoutModel)
+}
+
 class WorkoutTableViewCell: UITableViewCell {
 
     private lazy var backgroundCell: UIView = {
@@ -27,7 +31,6 @@ class WorkoutTableViewCell: UITableViewCell {
 
     var workoutImageView: UIImageView = {
         let imageView = UIImageView()
-        //imageView.image = UIImage(named: "workoutTestImage")
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -62,18 +65,22 @@ class WorkoutTableViewCell: UITableViewCell {
 
     private lazy var startButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = .specialYellow
+        //button.backgroundColor = .specialYellow
         button.layer.cornerRadius = 10
         button.addShadowOnView()
-        button.setTitle("START", for: .normal)
+        //button.setTitle("START", for: .normal)
         button.titleLabel?.font = .robotoBold16()
-        button.tintColor = .specialDarkGreen
+       // button.tintColor = .specialDarkGreen
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
         return button
     }()
 
     var labelsStackView = UIStackView()
+
+    var workoutModel = WorkoutModel()
+
+    weak var cellStartWorkoutDelegate: StartWorkoutProtocol?
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -102,10 +109,11 @@ class WorkoutTableViewCell: UITableViewCell {
     }
 
     @objc private func startButtonTapped() {
-        print("startButtonTapped")
+        cellStartWorkoutDelegate?.startButtonTapped(model: workoutModel)
     }
 
     func cellConfigure(model: WorkoutModel) {
+        workoutModel = model
         workoutNameLabel.text = model.workoutName
 
         let (min, sec) = { (secs: Int) -> (Int, Int) in
@@ -117,9 +125,20 @@ class WorkoutTableViewCell: UITableViewCell {
         guard let imageData = model.workoutImage else { return }
         guard let image = UIImage(data: imageData) else { return }
         workoutImageView.image = image
+
+        if model.status {
+            startButton.setTitle("COPLITE", for: .normal)
+            startButton.tintColor = .white
+            startButton.backgroundColor = .specialGreen
+            startButton.isEnabled = false
+        } else {
+            startButton.setTitle("START", for: .normal)
+            startButton.tintColor = .specialDarkGreen
+            startButton.backgroundColor = .specialYellow
+            startButton.isEnabled = true
+        }
     }
-
-
+    
     private func setupConstraints() {
         NSLayoutConstraint.activate([
         backgroundCell.topAnchor.constraint(equalTo: topAnchor, constant: 5),
