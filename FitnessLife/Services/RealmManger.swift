@@ -22,4 +22,15 @@ class RealmManager {
         }
     }
 
+    func updateWorkoutModel(model: WorkoutModel, bool: Bool) {
+        try! localRealm.write {
+            model.status = bool
+        }
+    }
+
+    func deleteWorkoutModel(model: WorkoutModel) {
+        try! localRealm.write {
+            localRealm.delete(model)
+        }
+    }
 }

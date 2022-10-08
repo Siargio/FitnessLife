@@ -19,7 +19,7 @@ class CalendarCollectionViewCell: UICollectionViewCell {
         return dayOfWeekLabel
     }()
 
-    private lazy var numberOfDayLabel: UILabel = {
+    let numberOfDayLabel: UILabel = {
         let dayOfWeekLabel = UILabel()
         dayOfWeekLabel.text = "29"
         dayOfWeekLabel.font = .robotoMedium20()
