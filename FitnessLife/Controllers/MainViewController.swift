@@ -78,7 +78,7 @@ class MainViewController: UIViewController {
         tableView.showsVerticalScrollIndicator = false // скрол
         tableView.delaysContentTouches = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.isHidden = true
+        //tableView.isHidden = true
         return tableView
     }()
 
@@ -86,13 +86,21 @@ class MainViewController: UIViewController {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "noWorkout")
         imageView.contentMode = .scaleAspectFit
-        //imageView.isHidden = true
+        imageView.isHidden = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
 
-
     // MARK: - Setting
+
+    override func viewDidLayoutSubviews() {
+        userPhotoImageView.layer.cornerRadius = userPhotoImageView.frame.width / 2
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,11 +109,6 @@ class MainViewController: UIViewController {
         setDelegate()
         getWorkouts(date: Date())
         tableView.register(WorkoutTableViewCell.self, forCellReuseIdentifier: idWorkoutTableViewCell)
-
-    }
-
-    override func viewDidLayoutSubviews() {
-        userPhotoImageView.layer.cornerRadius = userPhotoImageView.frame.width / 2
     }
 
     private func setDelegate() {
@@ -129,7 +132,7 @@ class MainViewController: UIViewController {
 
     @objc private func addWorkoutButtonTapped() {
         let newWorkoutViewController = NewWorkoutViewController()
-        //newWorkoutViewController.modalPresentationStyle = .fullScreen
+        newWorkoutViewController.modalPresentationStyle = .fullScreen
         present(newWorkoutViewController, animated: true)
     }
 
@@ -163,10 +166,10 @@ extension MainViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: idWorkoutTableViewCell, for: indexPath) as? WorkoutTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: idWorkoutTableViewCell, for: indexPath) as! WorkoutTableViewCell
         let model = workoutArray[indexPath.row]
-        cell?.cellConfigure(model: model)
-        return cell ?? UITableViewCell()
+        cell.cellConfigure(model: model)
+        return cell
     }
 }
 

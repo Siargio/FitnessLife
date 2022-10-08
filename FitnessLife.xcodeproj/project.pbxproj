@@ -33,6 +33,7 @@
 		EC87586428F05C4B0046FE0B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EC87586328F05C4B0046FE0B /* RealmSwift */; };
 		EC87586628F05D9E0046FE0B /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC87586528F05D9E0046FE0B /* WorkoutModel.swift */; };
 		EC87586928F076340046FE0B /* RealmManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC87586828F076340046FE0B /* RealmManger.swift */; };
+		ECC3A1F928F17EE700DE7C0B /* SimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC3A1F828F17EE700DE7C0B /* SimpleAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		EC84E8CB28E4E8A3006ACD4A /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		EC87586528F05D9E0046FE0B /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
 		EC87586828F076340046FE0B /* RealmManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManger.swift; sourceTree = "<group>"; };
+		ECC3A1F828F17EE700DE7C0B /* SimpleAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				EC84E8B728E48CF8006ACD4A /* Application */,
 				EC84E8B628E48CF4006ACD4A /* Models */,
 				EC84E8B428E48CEF006ACD4A /* Views */,
+				ECC3A1F728F17ED600DE7C0B /* Alerts */,
 				EC84E8B528E48CF2006ACD4A /* Controllers */,
 				EC87586728F0761E0046FE0B /* Services */,
 				EC84E8B328E48CE8006ACD4A /* Extensions */,
@@ -221,6 +224,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		ECC3A1F728F17ED600DE7C0B /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				ECC3A1F828F17EE700DE7C0B /* SimpleAlert.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -318,6 +329,7 @@
 				EC84E8CC28E4E8A3006ACD4A /* CalendarCollectionViewCell.swift in Sources */,
 				EC0C418428E8C60400FD9503 /* NewWorkoutViewController.swift in Sources */,
 				EC84E8A028E488E3006ACD4A /* AppDelegate.swift in Sources */,
+				ECC3A1F928F17EE700DE7C0B /* SimpleAlert.swift in Sources */,
 				EC84E8A228E488E3006ACD4A /* SceneDelegate.swift in Sources */,
 				EC87586928F076340046FE0B /* RealmManger.swift in Sources */,
 			);

@@ -12,7 +12,7 @@ class DateAndRepeatView: UIView {
     // MARK: - UIElements
     
     private lazy var dateLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = "Date"
         label.font = .robotoMedium18()
         label.textColor = .specialGray
@@ -20,8 +20,8 @@ class DateAndRepeatView: UIView {
         return label
     }()
 
-    private lazy var datePicker: UIDatePicker = {
-       let datePicker = UIDatePicker()
+    let datePicker: UIDatePicker = {
+        let datePicker = UIDatePicker()
         datePicker.datePickerMode = .date
         datePicker.tintColor = .specialGreen
         datePicker.translatesAutoresizingMaskIntoConstraints = false
@@ -29,7 +29,7 @@ class DateAndRepeatView: UIView {
     }()
 
     private lazy var repeatLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = "Repeat every 7 days"
         label.font = .robotoMedium18()
         label.textColor = .specialGray
@@ -42,10 +42,10 @@ class DateAndRepeatView: UIView {
         repeatSwitch.isOn = true
         repeatSwitch.onTintColor = .specialGreen
         repeatSwitch.translatesAutoresizingMaskIntoConstraints = false
-       return repeatSwitch
+        return repeatSwitch
     }()
 
-// MARK: - Setup
+    // MARK: - Setup
 
     var dateStackView = UIStackView()
     var repeatStackView = UIStackView()
