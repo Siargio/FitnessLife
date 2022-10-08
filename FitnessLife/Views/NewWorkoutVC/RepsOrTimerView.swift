@@ -21,7 +21,7 @@ class RepsOrTimerView: UIView {
         return label
     }()
 
-    private lazy var numberOfSetLabel: UILabel = {
+    let numberOfSetLabel: UILabel = {
        let label = UILabel()
         label.text = "1"
         label.font = .robotoMedium24()
@@ -30,7 +30,7 @@ class RepsOrTimerView: UIView {
         return label
     }()
 
-    private lazy var setsSlider: UISlider = {
+    let setsSlider: UISlider = {
         let slider = UISlider()
         slider.minimumValue = 1
         slider.maximumValue = 50
@@ -59,7 +59,7 @@ class RepsOrTimerView: UIView {
         return label
     }()
 
-    private lazy var numberOfRepsLabel: UILabel = {
+    let numberOfRepsLabel: UILabel = {
        let label = UILabel()
         label.text = "1"
         label.font = .robotoMedium24()
@@ -68,7 +68,7 @@ class RepsOrTimerView: UIView {
         return label
     }()
 
-    private lazy var repsSlider: UISlider = {
+    let repsSlider: UISlider = {
         let slider = UISlider()
         slider.minimumValue = 1
         slider.maximumValue = 50
@@ -88,7 +88,7 @@ class RepsOrTimerView: UIView {
         return label
     }()
 
-    private lazy var numberOfTimerLabel: UILabel = {
+    let numberOfTimerLabel: UILabel = {
        let label = UILabel()
         label.text = "0 min"
         label.font = .robotoMedium24()
@@ -97,7 +97,7 @@ class RepsOrTimerView: UIView {
         return label
     }()
 
-    private lazy var timerSlider: UISlider = {
+    let timerSlider: UISlider = {
         let slider = UISlider()
         slider.minimumValue = 1
         slider.maximumValue = 600
