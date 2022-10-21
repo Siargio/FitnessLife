@@ -47,7 +47,7 @@ class WorkoutTableViewCell: UITableViewCell {
 
     private lazy var workoutRepsLabel: UILabel = {
        let label = UILabel()
-        label.text = "Reps: 10"
+        //label.text = "Reps: 10"
         label.textColor = .specialGray
         label.font = .robotoMedium16()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -56,7 +56,7 @@ class WorkoutTableViewCell: UITableViewCell {
 
     private lazy var workoutSetsLabel: UILabel = {
        let label = UILabel()
-        label.text = "Sets: 2"
+        //label.text = "Sets: 2"
         label.textColor = .specialGray
         label.font = .robotoMedium16()
         label.translatesAutoresizingMaskIntoConstraints = false

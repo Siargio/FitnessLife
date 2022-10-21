@@ -140,9 +140,17 @@ class NewWorkoutViewController: UIViewController {
         let tapScreen = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         tapScreen.cancelsTouchesInView = false
         view.addGestureRecognizer(tapScreen) // скрывает клаву если калацть в любом месте
+
+        let swipeScreen = UISwipeGestureRecognizer(target: self, action: #selector(swipeHideKeyboard))
+        swipeScreen.cancelsTouchesInView = false
+        view.addGestureRecognizer(swipeScreen)
     }
 
     @objc private func hideKeyboard() {
+        view.endEditing(true)
+    }
+
+    @objc private func swipeHideKeyboard() {
         view.endEditing(true)
     }
 
@@ -150,11 +158,11 @@ class NewWorkoutViewController: UIViewController {
         guard let nameWorkout = nameTextField.text else { return }
         workoutModel.workoutName = nameWorkout
 
-        workoutModel.workoutDate = dateAndRepeatView.datePicker.date
-        let calendar = Calendar.current
-        let components = calendar.dateComponents([.weekday], from: dateAndRepeatView.datePicker.date)
-        guard let weekday = components.weekday else { return }
-        workoutModel.workoutNumberOfDay = weekday
+        workoutModel.workoutDate = dateAndRepeatView.datePicker.date.localDate()
+//        let calendar = Calendar.current
+//        let components = calendar.dateComponents([.weekday], from: dateAndRepeatView.datePicker.date)
+//        guard let weekday = components.weekday else { return }
+        workoutModel.workoutNumberOfDay = dateAndRepeatView.datePicker.date.getWeekDayNumber()
 
         workoutModel.workoutRepeat = (dateAndRepeatView.repeatSwitch.isOn)
 
