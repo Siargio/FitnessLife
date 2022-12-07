@@ -15,6 +15,7 @@
 		EC0C418D28E8DE3C00FD9503 /* DateAndRepeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C418C28E8DE3C00FD9503 /* DateAndRepeatView.swift */; };
 		EC0C418F28E8DE4D00FD9503 /* RepsOrTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C418E28E8DE4D00FD9503 /* RepsOrTimerView.swift */; };
 		EC2782BB28EE2B6A0034B5EA /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2782BA28EE2B6A0034B5EA /* UILabel+Extensions.swift */; };
+		EC45EAE129410974003230A1 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC45EAE029410974003230A1 /* CustomAlert.swift */; };
 		EC5A0F432903327C0047B9D0 /* Date + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5A0F422903327C0047B9D0 /* Date + Extensions.swift */; };
 		EC8360D028E78FD40037F29C /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8360CF28E78FD40037F29C /* WorkoutTableViewCell.swift */; };
 		EC84E8A028E488E3006ACD4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84E89F28E488E3006ACD4A /* AppDelegate.swift */; };
@@ -49,6 +50,7 @@
 		EC0C418C28E8DE3C00FD9503 /* DateAndRepeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndRepeatView.swift; sourceTree = "<group>"; };
 		EC0C418E28E8DE4D00FD9503 /* RepsOrTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsOrTimerView.swift; sourceTree = "<group>"; };
 		EC2782BA28EE2B6A0034B5EA /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
+		EC45EAE029410974003230A1 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		EC5A0F422903327C0047B9D0 /* Date + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extensions.swift"; sourceTree = "<group>"; };
 		EC8360CF28E78FD40037F29C /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		EC84E89C28E488E3006ACD4A /* FitnessLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,6 +250,7 @@
 			children = (
 				ECC3A1F828F17EE700DE7C0B /* SimpleAlert.swift */,
 				ECBD85DA28F22FDF00EE3E17 /* OkCancelAlert.swift */,
+				EC45EAE029410974003230A1 /* CustomAlert.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				EC84E8A028E488E3006ACD4A /* AppDelegate.swift in Sources */,
 				ECC3A1F928F17EE700DE7C0B /* SimpleAlert.swift in Sources */,
 				EC84E8A228E488E3006ACD4A /* SceneDelegate.swift in Sources */,
+				EC45EAE129410974003230A1 /* CustomAlert.swift in Sources */,
 				ECBD85DB28F22FDF00EE3E17 /* OkCancelAlert.swift in Sources */,
 				EC87586928F076340046FE0B /* RealmManger.swift in Sources */,
 			);
