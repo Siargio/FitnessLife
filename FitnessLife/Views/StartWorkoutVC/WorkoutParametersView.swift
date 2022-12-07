@@ -9,6 +9,7 @@ import UIKit
 
 protocol NextSetProtocol: AnyObject {
     func nextSetTapped()
+    func editingTapped()
 }
 
 class WorkoutParametersView: UIView {
@@ -133,7 +134,7 @@ class WorkoutParametersView: UIView {
     }
 
     @objc private func editingButtonTapped() {
-        print("editingButtonTapped")
+        cellNextSetDelegate?.editingTapped()
     }
 
     @objc private func nextSetsButtonTapped() {
